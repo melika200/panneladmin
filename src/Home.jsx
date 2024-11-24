@@ -17,6 +17,7 @@ import {
   LineChart,
   Line,
 } from "recharts";
+import Search from "./Search/Search";
 
 export default function Home() {
   const data = [
@@ -63,6 +64,32 @@ export default function Home() {
       amt: 2100,
     },
   ];
+  const cart = [
+    {
+      id: 1,
+      icon: <BsFillArchiveFill />,
+      title: "product",
+      num: 300,
+    },
+    {
+      id: 2,
+      icon: <BsFillGrid3X2GapFill />,
+      title: "category",
+      num: 12,
+    },
+    {
+      id: 3,
+      icon: <BsPeopleFill />,
+      title: "customers",
+      num: 33,
+    },
+    {
+      id: 4,
+      icon: <BsFillBellFill />,
+      title: "alerts",
+      num: 42,
+    },
+  ];
   return (
     <>
       <main className="main-container">
@@ -70,34 +97,15 @@ export default function Home() {
           <h3>DASHBOARD</h3>
         </div>
         <div className="main-carts">
-          <div className="cart">
-            <div className="cart-inner">
-              <h3>Products</h3>
-              <BsFillArchiveFill className="cart-icon" />
+          {cart.map((item) => (
+            <div key={item.id} className="cart">
+              <div className="cart-inner">
+                <h3>{item.title}</h3>
+                <span className="cart-icon">{item.icon}</span>{" "}
+              </div>
+              <h1>{item.num}</h1>
             </div>
-            <h1>300</h1>
-          </div>
-          <div className="cart">
-            <div className="cart-inner">
-              <h3>Categorys</h3>
-              <BsFillGrid3X2GapFill className="cart-icon" />
-            </div>
-            <h1>12</h1>
-          </div>
-          <div className="cart">
-            <div className="cart-inner">
-              <h3>Customers</h3>
-              <BsPeopleFill className="cart-icon" />
-            </div>
-            <h1>33</h1>
-          </div>
-          <div className="cart">
-            <div className="cart-inner">
-              <h3>Alerts</h3>
-              <BsFillBellFill className="cart-icon" />
-            </div>
-            <h1>42</h1>
-          </div>
+          ))}
         </div>
         <div className="charts">
           <ResponsiveContainer width="100%" height="100%">
@@ -157,6 +165,7 @@ export default function Home() {
             </LineChart>
           </ResponsiveContainer>
         </div>
+        <Search/>
       </main>
     </>
   );

@@ -1,0 +1,82 @@
+/* General container styles */
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .container {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Search input styles */
+  form {
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  thead {
+    background-color: #82a46b22;
+    color: rgb(246, 242, 242);
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  thead tr {
+    border-bottom: 2px solid #011c38;
+
+  }
+  
+  thead td {
+    padding:10px 25px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tbody td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #221d1d;
+    color: #f4f2f2;
+  }
+  
+  /* Hover effect */
+  tbody tr:hover {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+  
